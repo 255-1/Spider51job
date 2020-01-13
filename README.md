@@ -1,2 +1,40 @@
 # Spider51job
 爬取代理ip->爬取51job->清洗->存入MySQL
+# 爬虫使用文档  
+## 1.本地建立数据库 
+确保你有安装好MySQL数据库  
+windows下打开使用win+R搜索cmd，打开命令行  
+cd 到项目目录下，我的是G:\IDEA_Project\Spider_v1.1  
+windows切换磁盘先打G: 然后再cd 路径  
+> cd G:\IDEA_Project\Spider_v1.1
+
+保证前面的路径已经成功改为项目的位置
+启动mysql  
+> mysql -uroot -p  
+
+运行脚本  
+> mysql> source databaseDDL.sql
+出现一下结果为成功
+```
+Query OK, 1 row affected, 1 warning (0.01 sec)
+
+Query OK, 1 row affected, 1 warning (0.00 sec)
+
+Database changed
+Query OK, 0 rows affected, 30 warnings (0.00 sec)
+
+Database changed
+Query OK, 0 rows affected, 10 warnings (0.00 sec)
+```
+
+可以通过show databases;查看数据库的建立  
+可以通过use [数据库名]; 然后 show tables; 查看表的建立
+
+## 2.启动项目（使用IDEA）
+确保电脑安装了maven 3.6+ ,Java 1.8+ 
+0）在项目下新建一个data文件夹。
+使用idea启动项目    
+1）确保File->Settings->Editor->File Encodings都是UTF-8，以及With NO BOM   
+2）然后在src->main->java->resource->db-config下修改userName和passwd为你的Mysql的用户名和秘密。  
+如果是远程数据库修改上面的address中的两个localhost为你的ip地址即可  
+3）Main函数，右键->Run "Main.main()"然后静静等待就行
