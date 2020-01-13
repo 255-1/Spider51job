@@ -37,7 +37,7 @@ Query OK, 0 rows affected, 10 warnings (0.00 sec)
 1）确保File->Settings->Editor->File Encodings都是UTF-8，以及With NO BOM   
 2）然后在src->main->java->resource->db-config下修改userName和passwd为你的Mysql的用户名和秘密。  
 如果是远程数据库修改上面的address中的两个localhost为你的ip地址即可  
-3）Main函数，右键->Run "Main.main()"然后静静等待就行
+3）Main函数，启动，然后静静等待就行
 
 ## 3.注意事项
 1）默认设置是爬取400页代理ip，会被西刺代理封24小时，所以，要么修改GlobalConfiguration中相关参数，不然一天最多爬一次，不然只会清空代理ip的数据库  
